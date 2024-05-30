@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RuntimeIdentifier>win7</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<None Include="lib/libTest.so">
+		<PackagePath>runtimes/linux-x64/native/libTest.so</PackagePath>
+		<Pack>true</Pack>
+	</None>
+  </ItemGroup>
+</Project>
+
