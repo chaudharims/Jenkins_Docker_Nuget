@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+    triggers { always: true }
     stages {
         stage('docker build') {
             steps {
