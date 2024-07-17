@@ -20,7 +20,6 @@ pipeline {
         stage('Publish') {
             steps {
                 // Publish your NuGet package to a NuGet feed
-                #bat 'dotnet push YourPackage.nupkg -ApiKey <your_api_key> -Source <your_nuget_feed_url>'
             }
         }
     }
