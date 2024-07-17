@@ -5,7 +5,7 @@ pipeline {
         stage('docker build') {
             steps {
                 sh '''
-			docker build -f Dockerfile -t Test:latest .
+			docker build -f Dockerfile -t test:latest .
 		'''
             }
         }     
