@@ -4,7 +4,7 @@ pipeline {
         stage('docker build') {
             steps {
                 sh '''
-			dockerd --iptables=false
+			systemctl start docker 
 			docker build -f Dockerfile -t test:latest .
 		'''
             }
