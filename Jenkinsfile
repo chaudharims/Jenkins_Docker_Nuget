@@ -1,6 +1,9 @@
 pipeline {
     agent any
-    triggers { always: true }
+    triggers {
+        // Trigger on changes in the Git repository
+        scm 'GitSCM'
+    }
     stages {
         stage('docker build') {
             steps {
