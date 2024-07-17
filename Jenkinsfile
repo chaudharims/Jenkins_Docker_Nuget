@@ -7,7 +7,10 @@ pipeline {
                 // Checkout your source code from version control
                 //git clone 'github.com/chaudharims/nuget.git'
                 echo "hello"
-                sh ls
+                sh '''
+					echo "STAGE:NGE-VM"
+                    ls
+				'''
             }
         }     
     }
