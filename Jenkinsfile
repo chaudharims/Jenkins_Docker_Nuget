@@ -4,7 +4,7 @@ pipeline {
         stage('docker build') {
             steps {
                 sh '''
-			export DOCKER_HOST=unix:///run/user/$(id -u)/docker.sock 
+			systemctl start docker 
    			docker build -f Dockerfile -t test:latest .
 		'''
             }
