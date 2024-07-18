@@ -2,9 +2,9 @@ pipeline {
     agent any
     stages {
         stage('docker build') {
-	    agent { 
-  			docker { image 'node:14-alpine' } 
-	    }
+	   agent {
+                docker { image 'node:20.15.1-alpine3.20' }
+            }
             steps {
                 sh '''
 			systemctl start docker 
