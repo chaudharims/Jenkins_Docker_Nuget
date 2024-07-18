@@ -4,10 +4,12 @@ pipeline {
         stage('docker build') {
 	   agent {
                 docker { image 'node:20.15.1-alpine3.20' }
+		args '-u root'
+		reuseNode true
             }
             steps {
                 sh '''
-			systemctl start docker 
+			sudo systemctl start docker 
    			docker build -f Dockerfile -t test:latest .
 		'''
             }
