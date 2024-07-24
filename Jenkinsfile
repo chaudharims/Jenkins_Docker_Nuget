@@ -5,7 +5,8 @@ pipeline {
 	 
             steps {
                 sh '''
-			systemctl start docker 
+			whoami
+			#systemctl start docker 
    			docker build -f Dockerfile -t test:latest .
 		'''
             }
