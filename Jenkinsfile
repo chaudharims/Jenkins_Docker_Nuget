@@ -5,9 +5,8 @@ pipeline {
 	 
             steps {
                 sh '''
-			whoami
-			#systemctl start docker 
    			docker build -f Dockerfile -t test:latest .
+      			docker images
 		'''
             }
         }     
