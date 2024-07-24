@@ -10,11 +10,5 @@ pipeline {
                     '''
                 }
             }
-            
-            stage('Publish') {
-                steps {
-                    // Publish your NuGet package to a NuGet feed
-                }
-            }
     }
 }
