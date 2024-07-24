@@ -1,18 +1,20 @@
 pipeline {
     agent any   
         stages {
-        stage('Pack') {
-            steps {
-                // Pack your project into a NuGet package
-                sh mkdir -p Nuget_stage
-                sh 'dotnet pack Package.csproj -o Nuget_stage --configfile NuGet.Config /p:Version=1.2.3'
+            stage('Pack') {
+                steps {
+                    // Pack your project into a NuGet package
+                    sh'''
+                    mkdir -p Nuget_stage
+                    dotnet pack Package.csproj -o Nuget_stage --configfile NuGet.Config /p:Version=1.2.3
+                    '''
+                }
             }
-        }
-        
-        stage('Publish') {
-            steps {
-                // Publish your NuGet package to a NuGet feed
+            
+            stage('Publish') {
+                steps {
+                    // Publish your NuGet package to a NuGet feed
+                }
             }
-        }
     }
 }
