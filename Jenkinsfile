@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh '''
 			#sudo systemctl start docker 
-   			sudo docker build -f Dockerfile -t test:latest .
+   			docker build -f Dockerfile -t test:latest .
 		'''
             }
         }     
