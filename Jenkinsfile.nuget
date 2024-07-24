@@ -12,7 +12,9 @@ pipeline {
             }
             stage('Publish') {
                 steps {
-                    // Publish NuGet package
+                    sh'''
+                        echo 'Publish NuGet package'
+                    '''
                 }
             }
     }
