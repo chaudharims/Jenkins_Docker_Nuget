@@ -10,5 +10,10 @@ pipeline {
                     '''
                 }
             }
+            stage('Publish') {
+                steps {
+                    // Publish NuGet package
+                }
+            }
     }
 }
