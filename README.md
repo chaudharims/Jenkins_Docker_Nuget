@@ -1,2 +1,2 @@
 ## Jenkins_Docker_Nuget
-This repo is used to create docker container and nuget packages.  
+This repo is used to build Docker containers and nuget packages using Jenkins pipeline. 
